@@ -1,1 +1,1 @@
-rgv and argc are how command line arguments are passed to main()
+0x0A. C - argc, argv
