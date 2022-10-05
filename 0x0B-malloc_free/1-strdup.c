@@ -1,36 +1,39 @@
 #include "main.h"
 #include <stdlib.h>
-
-/**
- *   * _strdup - Duplicate a string
- *     * @str: the string to duplicate
- *       *
- *         * Return: the string duplicated
- *           */
+/*
+    _strdup - Main Entry
+     @str: input
+     Return: 0
+ */
 char *_strdup(char *str)
 {
-		int a = 0, i = 1;
-			char *s;
+		char *nstr;
+			unsigned int len, i;
 
-				if (str == NULL)
-							return (NULL);
+				/* check is str is null */
+			if (str == NULL)
+						{
+									return (NULL);
+										}
 
-					while (str[i])
-							{
-										i++;
-											}
+					len = 0;
+						while (str[len] != '\0')
+								{
+											len++;
+												}
 
-						s = malloc((sizeof(char) * i) + 1);
+							nstr = malloc(sizeof(char) * (len + 1));
 
-							if (s == NULL)
-										return (NULL);
-
-								while (a < i)
+								/*check if malloc was successful*/
+								if (nstr == NULL)
 										{
-													s[a] = str[a];
-															a++;
-																}
+													return (NULL);
+														}
 
-									s[a] = '\0';
-										return (s);
+									for (i = 0; i < len; i++)
+											{
+														nstr[i] = str[i];
+															}
+										nstr[len] = '\0';
+											return (nstr);
 }
