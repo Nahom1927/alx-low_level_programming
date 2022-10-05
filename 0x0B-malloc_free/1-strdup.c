@@ -16,8 +16,6 @@ char *_strdup(char *str)
 							return (NULL);
 
 					while (str[i])
-
-						//if true 
 							{
 										i++;
 											}
