@@ -1,34 +1,17 @@
-/*
- *  * File: 3-mul.c
- *   * Auth: Gedeon Obae Gekonge
- *    */
-
 #include <stdio.h>
-#include <stdlib.h>
-
 /**
- *  * main - Prints the multiplication of two numbers, followed by a new line.
- *   * @argc: The number of arguments supplied to the program.
- *    * @argv: An array of pointers to the arguments.
- *     *
- *      * Return: If the program receives two arguments - 0.
- *       *         If the program does not receive two arguments - 1.
- *        */
+ *  * main - prints all argument it receives
+ *   * @argc: input
+ *    * @argv: input
+ *     * Return: Always 0 (Success)
+ *      */
 int main(int argc, char *argv[])
 {
-		int num1, num2, prod;
+		int i;
 
-			if (argc != 3)
+			for (i = 0; i < argc; i++)
 					{
-								printf("Error\n");
-										return (1);
-											}
-
-				num1 = atoi(argv[1]);
-					num2 = atoi(argv[2]);
-						prod = num1 * num2;
-
-							printf("%d\n", prod);
-
-								return (0);
+								printf("%s\n", argv[i]);
+									}
+				return (0);
 }
