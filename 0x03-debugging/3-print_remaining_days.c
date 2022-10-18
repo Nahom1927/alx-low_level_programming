@@ -1,69 +1,36 @@
-#include<stdio.h>
-void main()
+#include <stdlib.h>
+#include "main.h"
+#include <stdio.h>
+#include <time.h>
+/**
+ * print_remaining_days - take a date and print
+ * left in the year, taking leap years into account
+ * @month: month in number
+ * @day: day of month
+ * @year: year
+ * Return: void
+ */
+void print_remaining_days(int month, int day, int year)
 {
-int n;
-printf("\n enter the month");
-scanf ("In %d" , &n);
-else if(n==1)
+if ((year % 4 == 0) && (year % 400 == 0 || year % 100 != 0))
 {
-printf("\n jan=31");
+if (month >= 3 && day >= 60)
+{
+day++;
 }
-
-else if (n==2)
-{
-printf("\n feb=28");
+printf("Day of the year: %d\n", day);
+printf("Remaining days: %d\n", 366 - day);
 }
-
-else if (n==3)
+else
 {
-printf("\n march=31");
-}
-else if(n==4)
+if (month == 2 && day == 60)
 {
-printf("\n april=30");
+printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
 }
-
-else if (n==5)
+else
 {
-printf("\n may=31");
+printf("Day of the year: %d\n", day);
+printf("Remaining days: %d\n", 365 - day);
 }
-
-else if (n==6)
-{
-printf("\n june=30”);
 }
-
-else if(n==7)
-{
-printf("\n july=31”);
 }
-
-else if (n==8)
-{
-printf("\n aug=31");
-}
-
-else if (n==9)
-{
-printf("\n sept=30”);
-}
-  else if (n==10)
-{
- printf ("\n oct=31”);
-}
-
-else if (n==11)
-{
-printf("\n nov=30);
-}
-
-else if (n==12)
-
-{
-printf("\n dec=31”);
-
-} 
-
-}
-
-
