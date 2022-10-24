@@ -1,1 +1,1 @@
-0x0E. C - Structures, typedef
+C - More singly linked lists
